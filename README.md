@@ -19,6 +19,7 @@ This tool can act as testing mechanism to test a RAG model's performance over va
 ## Features
 
 - **Document Upload**: Supports uploading PDF documents and automatically processes them into text chunks.
+- **Side by side comparison**: Allow direct comparison of the uploaded PDF file and the parsed content that got feeded to the Embedding model.
 - **Dynamic Vector Database Creation**: Automatically re-creates the vector database when a new document is uploaded, a different embedding model is selected, or chunking parameters are updated.
 - **Embedding Models**: Allows users to select from various embedding models for document chunk embeddings.
 - **LLM Interaction**: Provides a custom LLM chat interface where users can retrieve document-relevant information.
