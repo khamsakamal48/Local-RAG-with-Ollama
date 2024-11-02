@@ -66,7 +66,7 @@ This tool can act as testing mechanism to test a RAG model's performance over va
   ```css
   Summarise the document in 200 words with bullet points in a tone and language that even a high school student can understand.
   ```
-  ![](/Screenshots/RAG%20Usage.png)
+  ![](Screenshots/RAG%20Usage.png)
 
 - Having a chat with LLM
    ```css
