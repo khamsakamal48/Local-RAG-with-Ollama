@@ -6,7 +6,7 @@ This project is a Retrieval-Augmented Generation (RAG) application built with St
 
 This project can also act as a tool to chat with LLM without uploading a document.
 
-This tool can act as testing mechanism to test a RAG model's performance over various LLM and Embedding models, Chunk sizes and various parameters of LLMs. 
+This tool can act as a testing mechanism to test an RAG model's performance over various LLM and Embedding models, Chunk sizes and various parameters of LLMs.
 
 ## Table of Contents
 
@@ -33,16 +33,16 @@ This tool can act as testing mechanism to test a RAG model's performance over va
 - [Python 3](https://www.python.org/downloads/)
 
 ### Installation
-1. Clone the repository
+1. **Clone the repository**
     ```bash
      git clone https://github.com/khamsakamal48/Local-RAG-with-Ollama.git
      cd Local-RAG-with-Ollama
     ```
-2. Install pre-requisites
+2. **Install pre-requisites**
     ```shell
     pip install -r requirements.txt
     ```
-3. Run the app
+3. **Run the app**
     ```shell
     streamlit run app.py
     ```
@@ -63,13 +63,13 @@ This tool can act as testing mechanism to test a RAG model's performance over va
    - If you don't want to upload a document - you can and simply chat with the app.
 
 ### Examples
-- After uploading a PDF ([sample used](https://www.cse.iitb.ac.in/~pb/papers/mts23-maml.pdf)) and selecting embedding parameters, use prompts like:
+- **After uploading a PDF ([sample used](https://www.cse.iitb.ac.in/~pb/papers/mts23-maml.pdf)) and selecting embedding parameters, use prompts like:**
   ```css
   Summarise the document in 200 words with bullet points in a tone and language that even a high school student can understand.
   ```
   ![](Screenshots/RAG%20Usage.png)
 
-- Having a chat with LLM
+- **Having a chat with LLM**
    ```css
    Why is the sky blue? Respond in one sentence.
    ```
