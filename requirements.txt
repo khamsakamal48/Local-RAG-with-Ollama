@@ -1,0 +1,14 @@
+ollama
+chromadb
+streamlit
+fitz
+watchdog
+langchain-ollama
+PyPDF2
+pdfplumber
+langchain-community
+langchain-text-splitters
+python-dotenv
+langchain
+sentence-transformers
+langchain-core
