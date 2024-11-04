@@ -1,6 +1,4 @@
 # Importing necessary libraries for the app
-from sqlite3 import OperationalError
-
 import streamlit as st                                                                                                  # Web app framework
 import os                                                                                                               # For file and directory operations
 import tempfile                                                                                                         # For creating temporary files and directories
@@ -11,6 +9,7 @@ import chromadb                                                                 
 
 # Importing specific modules and classes
 from chromadb.api.client import SharedSystemClient                                                                      # Manages system cache for ChromaDB
+from httpx import ConnectError
 from langchain_community.document_loaders import UnstructuredPDFLoader                                                  # PDF loader for document processing
 from langchain_text_splitters import RecursiveCharacterTextSplitter                                                     # Text splitter for document chunking
 from typing import List, Tuple, Dict, Any                                                                               # Type hinting for functions
@@ -225,7 +224,13 @@ def main() -> None:
         st.header('Model Selection')
 
         # List available models
-        models_info = ollama.list()
+        try:
+            models_info = ollama.list()
+
+        # Handle error when Ollama is not installed or accessible over default port
+        except ConnectError:
+            st.error('Ollama not installed or not accessible.')
+            st.stop()
 
         # Extract model names for selection
         available_models = extract_model_names(models_info)
