@@ -42,6 +42,7 @@ This tool can act as a testing mechanism to test an RAG model's performance over
     ```shell
     pip install -r requirements.txt
     ```
+
 3. **Run the app**
     ```shell
     streamlit run app.py

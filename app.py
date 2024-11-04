@@ -9,11 +9,12 @@ import chromadb                                                                 
 
 # Importing specific modules and classes
 from chromadb.api.client import SharedSystemClient                                                                      # Manages system cache for ChromaDB
-from httpx import ConnectError
+from httpx import ConnectError                                                                                          # To catch error when Ollama is not present
 from langchain_community.document_loaders import UnstructuredPDFLoader                                                  # PDF loader for document processing
 from langchain_text_splitters import RecursiveCharacterTextSplitter                                                     # Text splitter for document chunking
 from typing import List, Tuple, Dict, Any                                                                               # Type hinting for functions
 from PyPDF2 import PdfReader                                                                                            # PDF reading library for parsing PDF content
+from sqlite3 import OperationalError                                                                                    # Handle error where query output is less than expected
 
 # Function to extract model names from the provided model information
 @st.cache_resource
